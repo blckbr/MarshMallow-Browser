@@ -1,5 +1,17 @@
 # Changelog
 
+## 4.0.13 — Windows Wallpaper + AI RAM Tools
+
+- Adds one-click download of the wallpaper currently displayed on the new-tab page.
+- Adds Windows desktop-wallpaper integration using the user profile's desktop personalization.
+- Adds Windows lock-screen integration using the Windows user-profile personalization API when supported by the system/policy.
+- Converts the selected wallpaper to a local high-quality JPEG before handing it to Windows, including bundled WebP and online photographic wallpapers.
+- Adds a local **De qual aba vem o som?** tool to MarshMallow AI, listing tabs that are currently emitting audible audio.
+- Adds a local **Diminuir consumo de RAM** tool that suspends background web pages while keeping the current tab active.
+- Suspended tabs stay in the tab strip and automatically reload when selected.
+- Does not suspend the active Watch Together capture tab.
+- Preserves the 4.0.12 premium wallpaper engine, persistent profile and session restoration.
+
 ## 4.0.12 — Premium Wallpapers + Session Restore
 
 - Rebuilds the new-tab wallpaper experience around four explicit modes: no image, fixed, daily, and random on every new tab.

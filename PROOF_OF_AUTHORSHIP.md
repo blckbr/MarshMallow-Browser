@@ -86,3 +86,10 @@ Release artifact: `MarshMallow_4.0.12_PREMIUM_WALLPAPERS_SESSION_RESTORE.zip`
 SHA-256: `46b9fbcdd5d77ccaf5e9b36b3eff60af846f95a706567632909a4a49b8c09be7`
 
 Feature record: premium new-tab wallpaper engine with fixed/daily/random modes, optional curated photographic collection, 12 bundled offline wallpapers, and preserved persistent-tab restoration with private-tab exclusion.
+
+
+## MarshMallow 4.0.13
+
+Development record: Windows wallpaper download/apply integration and local AI utilities for audible-tab detection and background-tab RAM suspension.
+
+Release archive SHA-256: `C7D79135787D360E0557818B99194FA5DFA7E04017AC69471AF17BC2A077C10B`
