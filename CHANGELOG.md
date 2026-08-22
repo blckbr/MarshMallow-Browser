@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.1.0 — Extensions, Developer Mode, Media & Hardening
+
+- Adds `marshmallow://extensions` and persistent extension registry.
+- Adds unpacked, ZIP, CRX and HTTPS-source installation workflows.
+- Adds Developer Mode, file URL access, reload/remove/pack controls and compatibility diagnostics.
+- Adds F12/Ctrl+Shift+I DevTools and Ctrl+Shift+E extension manager shortcut.
+- Adds media-source detection and direct downloads; optional FFmpeg conversion enables MP3/MP4 for technically reusable sources.
+- Does not bypass DRM or other content protection.
+- Improves Windows wallpaper conversion for Chromium-decodable WebP/AVIF.
+- Hardens shell navigation, archive extraction, download collision handling, Watch Together capture cleanup, authentication and backend payload handling.
+
 ## 4.0.13 — Windows Wallpaper + AI RAM Tools
 
 - Adds one-click download of the wallpaper currently displayed on the new-tab page.

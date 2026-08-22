@@ -10,7 +10,7 @@ MarshMallow is a Windows-first web browser focused on a lightweight desktop expe
 
 ## Current public version
 
-The current public project line is **MarshMallow 4.0.x**.
+The current public project line is **MarshMallow 4.1.0**.
 
 This repository is the **official public project record** for MarshMallow. It intentionally does **not** publish the complete proprietary source code.
 
@@ -26,6 +26,9 @@ This repository is the **official public project record** for MarshMallow. It in
 - Curated photographic wallpaper collection plus an offline MarshMallow Studio collection
 - Download the active wallpaper or apply it to the Windows desktop/lock screen
 - AI quick tools to identify audible tabs and suspend background pages for lower RAM use
+- Chromium extension manager with Developer Mode and external HTTPS package support
+- Media source detector/downloader with optional local MP3/MP4 conversion
+- F12 / Ctrl+Shift+I developer tools
 - Private tabs
 - Fullscreen video support
 - Native-style context menus
@@ -35,11 +38,11 @@ This repository is the **official public project record** for MarshMallow. It in
 - Persistent cookie manager with encrypted export/import
 - Manual native-browser compatibility option when needed
 
-## MarshMallow 4.0
+## MarshMallow 4.1
 
-The MarshMallow 4.x line focuses on browser compatibility, persistent browsing state, local privacy controls and everyday browser ergonomics. **Version 4.0.13** adds Windows wallpaper integration and two local MarshMallow AI utilities. The active new-tab wallpaper can be downloaded, applied as the Windows desktop wallpaper, or applied to the Windows lock screen. The AI panel can identify which open tab is currently producing audio and can suspend background web pages to reduce RAM usage while preserving the current tab. Suspended tabs remain visible and reload automatically when selected.
+MarshMallow 4.1.0 adds a Chromium-extension manager with Developer Mode and external-source controls, F12 DevTools, a media detector/downloader, a broader Windows wallpaper conversion path and security/reliability hardening. Extension compatibility is intentionally described as partial where Electron does not implement the Chrome API an extension requires. Protected DRM media is not decrypted or bypassed.
 
-The release preserves the 4.0.12 premium new-tab wallpaper engine and the session-restore system: users can keep normal tabs open across restarts, while private tabs are never written to the restore file.
+The release preserves the session-restore system, premium new-tab wallpapers, persistent cookies, background-media wait behavior, AI and Watch Together.
 The complete proprietary source code is not published in this public record.
 
 ## License

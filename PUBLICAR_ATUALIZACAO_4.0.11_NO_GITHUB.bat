@@ -13,7 +13,7 @@ gh auth status >nul 2>nul || gh auth login --web --git-protocol https
 if not exist .git (
   git init
   git branch -M main
-  git remote add origin https://github.com/devsaex/MarshMallow-Browser.git
+  git remote add origin https://github.com/blckbr/MarshMallow-Browser.git
 )
 git add .
 git commit -m "MarshMallow 4.0.11 - tab restore and wallpaper center" || echo Nenhuma alteracao nova para commit.

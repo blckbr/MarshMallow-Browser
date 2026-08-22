@@ -15,6 +15,6 @@ git commit -m "MarshMallow 4.0.13 - Windows wallpaper and AI RAM tools"
 gh repo view MarshMallow-Browser >nul 2>&1
 if errorlevel 1 gh repo create MarshMallow-Browser --public --source=. --remote=origin --description "Official public record of MarshMallow Browser"
 git branch -M main
-git remote get-url origin >nul 2>&1 || git remote add origin https://github.com/devsaex/MarshMallow-Browser.git
+git remote get-url origin >nul 2>&1 || git remote add origin https://github.com/blckbr/MarshMallow-Browser.git
 git push -u origin main
 pause
