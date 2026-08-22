@@ -1,14 +1,23 @@
 # Changelog
 
-## 4.0.11 — Session Restore + Recovery
+## 4.0.12 — Premium Wallpapers + Session Restore
 
-- Adds an explicit **Keep tabs open after restarting MarshMallow** option in Settings → Startup.
-- Restores up to 50 normal tabs and the previously active tab.
-- Restores supported internal MarshMallow pages such as New Tab, Library, Themes and Settings.
-- Private tabs are never written to the session file or restored.
-- Temporary Google `/sorry/` verification URLs remain excluded from session persistence.
-- Session snapshots are refreshed while browsing instead of only during normal shutdown, improving recovery after unexpected exits.
-- Uses a temporary session file before replacement to reduce the chance of a partially written session record.
+- Rebuilds the new-tab wallpaper experience around four explicit modes: no image, fixed, daily, and random on every new tab.
+- Adds a curated high-resolution photographic collection and keeps it opt-in; it contacts Unsplash only when selected.
+- Adds 12 bundled MarshMallow Studio wallpapers as an offline collection and fallback.
+- Randomizes gallery order and adds a one-click “Surpreenda-me” workflow.
+- Uses lower-resolution online thumbnails and loads the full-size photo only when it becomes the active wallpaper.
+- Keeps the blank new-tab page truly blank until the user chooses to personalize it; the full picker no longer opens automatically.
+- Preserves user-uploaded wallpapers, intensity and blur controls.
+- Preserves 4.0.11 tab restoration and local crash-recovery snapshots; private tabs remain excluded.
+
+## 4.0.11 — Restore Tabs + Wallpaper Center
+
+- Adds an explicit “keep tabs open after restart” control under Startup settings.
+- Normal tabs are saved locally and restored; private tabs are excluded.
+- Session snapshots are refreshed during browsing for better recovery after unexpected shutdowns.
+- Adds wallpaper selection/removal controls to the new-tab page and Settings > Appearance.
+
 
 ## 4.0.10 — Startup Lock + Dynamic Dev Port
 
@@ -99,3 +108,4 @@
 ## 3.3.x
 
 Previous public line: settings center, fullscreen fixes, internal tabs, AI/chat improvements, creator record, Google verification guard, and editable-text context menu.
+

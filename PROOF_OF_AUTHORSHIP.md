@@ -69,10 +69,20 @@ SHA-256: `7fd3978348b7deb579918cf34730993bdb46fdd26bb07796f4bc217ec0775f02`
 
 Feature record: Windows single-instance profile protection, dynamic local Vite port selection, and safe cleanup of stale development processes without deleting cookies or browsing data.
 
+
 ## MarshMallow 4.0.11
 
-Release artifact: `MarshMallow_4.0.11_SESSION_RESTORE.zip`
+Release artifact: `MarshMallow_4.0.11_TAB_RESTORE_WALLPAPER_CENTER.zip`
 
-SHA-256: `1206b907ee710b761d13c54b8e8d1a192aa449cee32fbc14e606d83f038abfd0`
+SHA-256: `92f711ef75ed8057d602accbf1fb856bcd8e11afeb39273a1bedc9378e4579d8`
 
-Feature record: explicit opt-in tab restoration across restarts, crash-recovery session snapshots, restoration of the active tab, and exclusion of private tabs from persistence.
+Feature record: explicit persistent-tab restoration, local session autosave for recovery, new-tab wallpaper replacement/removal controls, and six bundled local wallpaper suggestions.
+
+
+## MarshMallow 4.0.12
+
+Release artifact: `MarshMallow_4.0.12_PREMIUM_WALLPAPERS_SESSION_RESTORE.zip`
+
+SHA-256: `46b9fbcdd5d77ccaf5e9b36b3eff60af846f95a706567632909a4a49b8c09be7`
+
+Feature record: premium new-tab wallpaper engine with fixed/daily/random modes, optional curated photographic collection, 12 bundled offline wallpapers, and preserved persistent-tab restoration with private-tab exclusion.

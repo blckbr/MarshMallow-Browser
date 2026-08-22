@@ -16,6 +16,6 @@ if not exist .git (
   git remote add origin https://github.com/devsaex/MarshMallow-Browser.git
 )
 git add .
-git commit -m "MarshMallow 4.0.11 - tab restore and wallpaper center" || echo Nenhuma alteracao nova para commit.
+git commit -m "MarshMallow 4.0.12 - premium wallpapers and session restore" || echo Nenhuma alteracao nova para commit.
 git push -u origin main
 pause

@@ -21,7 +21,9 @@ This repository is the **official public project record** for MarshMallow. It in
 - Watch Together
 - Bookmarks and history
 - Themes and wallpapers
-- Clean wallpaper-first new-tab page
+- Premium wallpaper-first new-tab page with fixed, daily and per-tab random modes
+- Restore normal tabs after restart, with local crash-recovery snapshots (private tabs excluded)
+- Curated photographic wallpaper collection plus an offline MarshMallow Studio collection
 - Private tabs
 - Fullscreen video support
 - Native-style context menus
@@ -29,13 +31,13 @@ This repository is the **official public project record** for MarshMallow. It in
 - Smart address-bar autocomplete learned from local history, favorites and open tabs
 - Chromium spell checker with correction suggestions
 - Persistent cookie manager with encrypted export/import
-- Session restore across restarts and crash recovery snapshots
 - Manual native-browser compatibility option when needed
 
 ## MarshMallow 4.0
 
-The MarshMallow 4.x line focuses on browser compatibility, persistent browsing state, local privacy controls and everyday browser ergonomics. Version 4.0.11 adds explicit session persistence: users can choose to keep normal tabs open across restarts, restore the previously active tab, and recover the last saved workspace after an unexpected shutdown. Session snapshots are updated during browsing and written through a temporary file to reduce corruption risk. Private tabs are never persisted. It preserves the 4.0.10 single-instance startup protection, dynamic development ports, background-media waiting behavior, safer vertical-tab controls, native omnibox overlay, Escape URL restoration, wallpaper-first new tab, and smart omnibox/spellcheck work. Site-initiated sign-in stays inside MarshMallow by default; opening a page in a native desktop browser is a manual compatibility option. The project does not automate account credentials or bypass anti-abuse systems.
+The MarshMallow 4.x line focuses on browser compatibility, persistent browsing state, local privacy controls and everyday browser ergonomics. **Version 4.0.12** upgrades the new-tab experience with a premium wallpaper engine: a clean no-image mode, a fixed image mode, a daily image mode, and a **Surprise Me** mode that changes the image on each new tab. It includes a curated high-resolution photographic collection loaded only when selected, plus a 12-image offline **MarshMallow Studio** fallback collection. The wallpaper picker no longer opens automatically on a blank new tab, and online thumbnails are deliberately smaller than the full wallpaper to reduce bandwidth.
 
+The release also preserves the 4.0.11 session-restore system: users can keep normal tabs open across restarts, while private tabs are never written to the restore file.
 The complete proprietary source code is not published in this public record.
 
 ## License
