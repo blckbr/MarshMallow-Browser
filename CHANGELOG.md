@@ -1,5 +1,24 @@
 # Changelog
 
+## 4.0.11 — Session Restore + Recovery
+
+- Adds an explicit **Keep tabs open after restarting MarshMallow** option in Settings → Startup.
+- Restores up to 50 normal tabs and the previously active tab.
+- Restores supported internal MarshMallow pages such as New Tab, Library, Themes and Settings.
+- Private tabs are never written to the session file or restored.
+- Temporary Google `/sorry/` verification URLs remain excluded from session persistence.
+- Session snapshots are refreshed while browsing instead of only during normal shutdown, improving recovery after unexpected exits.
+- Uses a temporary session file before replacement to reduce the chance of a partially written session record.
+
+## 4.0.10 — Startup Lock + Dynamic Dev Port
+
+- Prevents multiple MarshMallow instances from competing for the same persistent Chromium profile.
+- Adds a Windows single-instance lock and focuses the existing window when a second instance is requested.
+- Development launcher now chooses a free local Vite port between 1421 and 1440 instead of failing when 1421 is occupied.
+- Startup cleanup targets only stale MarshMallow development processes from the same project directory and preserves cookies, history and browsing data.
+- Fixes the Vite native-config warning by replacing `__dirname` with `import.meta.dirname`.
+- Preserves the 4.0.9 background-media guard.
+
 ## 4.0.9 — Background Media Wait
 
 - New tabs opened in the background can finish loading without playing HTML5 video/audio before their first activation.

@@ -29,11 +29,12 @@ This repository is the **official public project record** for MarshMallow. It in
 - Smart address-bar autocomplete learned from local history, favorites and open tabs
 - Chromium spell checker with correction suggestions
 - Persistent cookie manager with encrypted export/import
+- Session restore across restarts and crash recovery snapshots
 - Manual native-browser compatibility option when needed
 
 ## MarshMallow 4.0
 
-The MarshMallow 4.x line focuses on browser compatibility, persistent browsing state, local privacy controls and everyday browser ergonomics. Version 4.0.9 adds background-media waiting: a page opened in a background tab may load normally, while HTML5 video/audio playback is held until the user activates that tab for the first time. It preserves the safer vertical-tab controls from 4.0.8, native omnibox overlay from 4.0.7, Escape URL restoration from 4.0.6, wallpaper-first new tab from 4.0.5, and smart omnibox/spellcheck work from 4.0.4. Site-initiated sign-in stays inside MarshMallow by default; opening a page in a native desktop browser is a manual compatibility option. The project does not automate account credentials or bypass anti-abuse systems.
+The MarshMallow 4.x line focuses on browser compatibility, persistent browsing state, local privacy controls and everyday browser ergonomics. Version 4.0.11 adds explicit session persistence: users can choose to keep normal tabs open across restarts, restore the previously active tab, and recover the last saved workspace after an unexpected shutdown. Session snapshots are updated during browsing and written through a temporary file to reduce corruption risk. Private tabs are never persisted. It preserves the 4.0.10 single-instance startup protection, dynamic development ports, background-media waiting behavior, safer vertical-tab controls, native omnibox overlay, Escape URL restoration, wallpaper-first new tab, and smart omnibox/spellcheck work. Site-initiated sign-in stays inside MarshMallow by default; opening a page in a native desktop browser is a manual compatibility option. The project does not automate account credentials or bypass anti-abuse systems.
 
 The complete proprietary source code is not published in this public record.
 

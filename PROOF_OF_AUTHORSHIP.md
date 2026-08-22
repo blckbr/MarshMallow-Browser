@@ -61,3 +61,18 @@ SHA-256: `60a4b525efbe5875f9eb565dabaae40bbb7ff2894a17848a7374723621560a61`
 
 Feature record: background tabs load normally while HTML5 media playback is held until the user activates the tab for the first time.
 
+## MarshMallow 4.0.10
+
+Release artifact: `MarshMallow_4.0.10_STARTUP_LOCK_FIX.zip`
+
+SHA-256: `7fd3978348b7deb579918cf34730993bdb46fdd26bb07796f4bc217ec0775f02`
+
+Feature record: Windows single-instance profile protection, dynamic local Vite port selection, and safe cleanup of stale development processes without deleting cookies or browsing data.
+
+## MarshMallow 4.0.11
+
+Release artifact: `MarshMallow_4.0.11_SESSION_RESTORE.zip`
+
+SHA-256: `1206b907ee710b761d13c54b8e8d1a192aa449cee32fbc14e606d83f038abfd0`
+
+Feature record: explicit opt-in tab restoration across restarts, crash-recovery session snapshots, restoration of the active tab, and exclusion of private tabs from persistence.
