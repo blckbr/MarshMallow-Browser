@@ -1,5 +1,46 @@
 # Changelog
 
+## 4.0.9 — Background Media Wait
+
+- New tabs opened in the background can finish loading without playing HTML5 video/audio before their first activation.
+- Background media is temporarily muted and paused to avoid sound or playback progression before the user opens the tab.
+- On first activation, the temporary guard is released and pending playback may continue.
+- After the first activation, switching away does not automatically pause media the user has already chosen to play.
+- Manual tab mute remains independent from the temporary background-media guard.
+- Adds a default-on performance setting to enable/disable this behavior.
+
+## 4.0.8 — Safer Tab Controls
+
+- Moves the close-tab control to the upper-right corner of each vertical tab.
+- Moves the audio/mute control to the lower-right corner when audio is present.
+- Reserves a right-side control rail so tab titles do not overlap the controls.
+- Keeps compact-tab behavior while increasing separation between mute and close actions.
+- Reduces accidental tab closes when the user intends to mute/unmute audio.
+
+## 4.0.7 — Native Omnibox Overlay
+
+- Fixes smart address suggestions being visually hidden behind site content rendered in Electron `WebContentsView`.
+- Moves the autocomplete dropdown to a dedicated native overlay view above the active page instead of relying on CSS `z-index`.
+- Suggestions now float over YouTube/video/content without pushing the page downward.
+- Empty suggestion panels are not shown.
+- Preserves keyboard navigation and `Esc` URL restoration from 4.0.6.
+
+## 4.0.6 — Omnibox Escape Restore
+
+- Pressing `Esc` while editing the address bar discards uncommitted text and restores the real URL of the active tab.
+- Works after deleting the entire URL, replacing it with another address, or filling a smart suggestion with `Tab`.
+- On `marshmallow://newtab`, `Esc` restores the intentionally empty address field.
+- The suggestion popup closes and focus leaves the address bar after restoration.
+
+## 4.0.5 — Clean New Tab + Wallpaper
+
+- Replaces the old Google default new-tab/home target with an internal `marshmallow://newtab` page.
+- New tabs start visually clean, with an empty address field and no website loaded in the content area.
+- User-selected wallpaper is displayed directly on the new-tab page.
+- When no wallpaper is configured, MarshMallow shows a discreet personalization suggestion with direct wallpaper selection and Themes access.
+- Existing installs still using the historical Google default are migrated automatically; custom new-tab/home URLs remain configurable.
+- Smart omnibox suggestions from 4.0.4 remain available from the clean new tab.
+
 ## 4.0.4 — Smart Omnibox + Spellcheck
 
 - Adds local smart address-bar suggestions from browsing history, bookmarks and open tabs.
