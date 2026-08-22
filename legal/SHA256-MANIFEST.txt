@@ -1,0 +1,11 @@
+# SHA-256 manifest generated for preserved MarshMallow project archives
+# Generated: 2026-08-22T05:51:39Z
+f32402315857f788230cf2695402c7d8b9d9c0eb84af11c30ec3ee11361fcfd2  /mnt/data/MarshMallow_3.3.0_SETTINGS_CENTER.zip
+db2c03c6fb9f08efef0a52dcae6b89d8e2cf1fd2274326fe313d48af833c3112  /mnt/data/MarshMallow_3.3.1_FULLSCREEN_FIX.zip
+f6ede8743f67725ce9eb5b3c5de00faa0c68b60f037903f82162807cedafed6e  /mnt/data/MarshMallow_3.3.2_INTERNAL_TABS.zip
+bef55d80af8c5e2136d0cf96721279ec8c0ef76313f79c0637b4c009cc35acfd  /mnt/data/MarshMallow_3.3.3_AI_CHAT_FIX.zip
+dbaa3c7af23b7b33ee12a6da674d9dec14f3ae7de4eaabaf2faab001732760fb  /mnt/data/MarshMallow_3.3.4_GEMINI_SECRET_FIX.zip
+d12259ab10b41c661b13793a3ed6f300659eb8a7ab0cf3e7c83fde15fee8e086  /mnt/data/MarshMallow_3.3.5_OFFICIAL_CREATOR.zip
+45b3c6b0b0454fc15362a0a14bbd7854d3baaefb8311b73aed23f2d7622b33a0  /mnt/data/MarshMallow_3.3.6_GOOGLE_VERIFICATION_GUARD.zip
+bc0a7d82c11c81c811e4f7851c8a20bb0d0b5884675cccb720c9a122aca8b016  /mnt/data/MarshMallow_3.3.7_TEXTBOX_CONTEXT_MENU.zip
+cceb290d73159641da6ddc2b997942ad2bad42eabe48ccc7cd0293d56ed07a23  /mnt/data/MarshMallow_Official_Website_DOWNLOAD_READY.zip
