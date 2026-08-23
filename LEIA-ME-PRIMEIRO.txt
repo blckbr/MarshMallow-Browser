@@ -1,12 +1,10 @@
-MARSHMALLOW - REGISTRO PUBLICO NO GITHUB
-========================================
+MarshMallow Browser 5.0.0 — registro público oficial
 
-Este pacote foi montado para criar uma prova publica e datada da existencia e autoria do MarshMallow Browser sem publicar o codigo-fonte completo.
+Este diretório contém o registro público do projeto, notas de versão, créditos e documentos legais.
+O código-fonte proprietário completo do navegador não faz parte deste repositório público.
 
-1. Execute PUBLICAR_NO_GITHUB.bat.
-2. Se o GitHub CLI nao estiver instalado, o script tentara instala-lo pelo winget.
-3. Na primeira vez, o navegador abrira a autorizacao oficial do GitHub.
-4. O repositorio sugerido e MarshMallow-Browser.
-5. O repositorio sera PUBLICO, mas conterá apenas documentacao, marca, autoria, hashes e materiais publicos — nao o fonte completo.
+Site oficial: https://marshmallow-browser-br.pages.dev/
+Download: https://marshmallow-browser-br.pages.dev/download/
+Apoio voluntário: https://marshmallow-browser-br.pages.dev/apoie/
 
-Nunca cole tokens, senhas ou chaves API no repositorio.
+Criação e desenvolvimento: Deivison Santos — @devsaex

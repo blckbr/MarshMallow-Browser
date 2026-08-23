@@ -1,5 +1,15 @@
 # Changelog
 
+## 5.0.0 — Navigation, Game Mode, adaptive media and reliability
+
+- Brave-style Back/Forward navigation history menus.
+- Single-row responsive toolbar and repaired omnibox readiness.
+- Per-domain Game Mode and background scheduler.
+- GPU/WebGL performance diagnostics.
+- Deterministic native dock geometry.
+- MIME-aware audio/video/HLS/DASH media detection and optional FFmpeg merging.
+- DRM-safe media handling, discreet support integration and verified update metadata.
+
 ## 4.1.0 — Extensions, Developer Mode, Media & Hardening
 
 - Adds `marshmallow://extensions` and persistent extension registry.
@@ -131,4 +141,3 @@
 ## 3.3.x
 
 Previous public line: settings center, fullscreen fixes, internal tabs, AI/chat improvements, creator record, Google verification guard, and editable-text context menu.
-

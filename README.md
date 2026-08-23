@@ -1,48 +1,53 @@
 # MarshMallow Browser
 
-MarshMallow is a Windows-first web browser focused on a lightweight desktop experience, vertical tabs, browser organization, integrated AI, and Watch Together.
+MarshMallow is a Windows-first desktop web browser with a Black Piano interface, vertical tabs, browser organization, integrated AI, Watch Together, modern browser-game support and local media tools.
 
 ## Official links
 
 - Website: https://marshmallow-browser-br.pages.dev/
 - Download: https://marshmallow-browser-br.pages.dev/download/
+- Support: https://marshmallow-browser-br.pages.dev/apoie/
 - Creator credit: see `AUTHORS.md`
 
 ## Current public version
 
-The current public project line is **MarshMallow 4.1.0**.
+The current release line prepared by this record is **MarshMallow 5.0.x**.
 
 This repository is the **official public project record** for MarshMallow. It intentionally does **not** publish the complete proprietary source code.
 
 ## Main features
 
-- Vertical tabs and tab organization
+- Vertical tabs, groups, session restore and crash-recovery snapshots
+- Back/Forward history menus sourced from the tab's real Chromium navigation history
+- Address-bar autocomplete from local history, favorites and open tabs
 - MarshMallow AI
 - Watch Together
+- Game Mode per domain for modern HTML5/WebGL/WebAssembly browser games
+- Background-execution scheduler with per-site resource-saving preference
+- Factual GPU/WebGL/WebGL2/Canvas/Gamepad diagnostics
 - Bookmarks and history
-- Themes and wallpapers
-- Premium wallpaper-first new-tab page with fixed, daily and per-tab random modes
-- Restore normal tabs after restart, with local crash-recovery snapshots (private tabs excluded)
-- Curated photographic wallpaper collection plus an offline MarshMallow Studio collection
-- Download the active wallpaper or apply it to the Windows desktop/lock screen
-- AI quick tools to identify audible tabs and suspend background pages for lower RAM use
+- Built-in download manager with progress, pause, resume, cancel, history and Ctrl+J
+- Optional MarshMallow Downloader Manager integration reserved through official metadata; the browser remains independent when it is not installed
+- Themes, wallpapers and Black Piano customization
 - Chromium extension manager with Developer Mode and external HTTPS package support
-- Media source detector/downloader with optional local MP3/MP4 conversion
+- Media detector using network MIME metadata plus page observations
+- Audio/video/HLS/DASH classification and MediaSource awareness
+- Local video + audio merge when separate compatible streams are exposed and FFmpeg is available
+- Optional local MP3/MP4 conversion when FFmpeg is available
+- Protected DRM media is never decrypted or bypassed
 - F12 / Ctrl+Shift+I developer tools
 - Private tabs
 - Fullscreen video support
 - Native-style context menus
-- Extensive browser settings
-- Smart address-bar autocomplete learned from local history, favorites and open tabs
-- Chromium spell checker with correction suggestions
 - Persistent cookie manager with encrypted export/import
 - Manual native-browser compatibility option when needed
 
-## MarshMallow 4.1
+## MarshMallow 5.0
 
-MarshMallow 4.1.0 adds a Chromium-extension manager with Developer Mode and external-source controls, F12 DevTools, a media detector/downloader, a broader Windows wallpaper conversion path and security/reliability hardening. Extension compatibility is intentionally described as partial where Electron does not implement the Chrome API an extension requires. Protected DRM media is not decrypted or bypassed.
+MarshMallow 5.0 focuses on browser-grade reliability. It fixes the hidden-toolbar regression, the first-open autocomplete race and native WebContentsView overlap with side panels. It adds Brave-style navigation-history menus, Game Mode, performance diagnostics, safer release verification, and a media detector that no longer depends on filename extensions alone.
 
-The release preserves the session-restore system, premium new-tab wallpapers, persistent cookies, background-media wait behavior, AI and Watch Together.
+The browser keeps Chromium security boundaries intact. Game Mode is not a blanket permission bypass, support links are voluntary and non-intrusive, and update metadata is pinned to the official MarshMallow GitHub Release path with SHA-256 verification.
+
 The complete proprietary source code is not published in this public record.
 
 ## License
