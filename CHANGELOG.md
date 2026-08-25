@@ -1,5 +1,14 @@
 # Changelog
 
+## 5.0.1 — PDF Reader, private-window isolation and publishing
+
+- Adds a PDF.js-based PDF Reader for web and local PDF files.
+- Adds lazy thumbnails, text search, zoom, fit controls, print and save-copy workflows.
+- Keeps PDF handling Reader-only; no PDF editor is advertised.
+- Consolidates normal/private BrowserContext isolation for fullscreen, menus and Watch Together.
+- Adds a cumulative official GitHub Release download counter to the website.
+- Keeps release publication gated by build, runtime smoke test and SHA-256 matching.
+
 ## 5.0.0 — Navigation, Game Mode, adaptive media and reliability
 
 - Brave-style Back/Forward navigation history menus.

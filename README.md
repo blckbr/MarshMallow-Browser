@@ -22,6 +22,7 @@ This repository is the **official public project record** for MarshMallow. It in
 - Address-bar autocomplete from local history, favorites and open tabs
 - MarshMallow AI
 - Watch Together
+- PDF Reader based on PDF.js for web/local documents, lazy thumbnails, search, zoom, print and save copy
 - Game Mode per domain for modern HTML5/WebGL/WebAssembly browser games
 - Background-execution scheduler with per-site resource-saving preference
 - Factual GPU/WebGL/WebGL2/Canvas/Gamepad diagnostics
@@ -42,9 +43,9 @@ This repository is the **official public project record** for MarshMallow. It in
 - Persistent cookie manager with encrypted export/import
 - Manual native-browser compatibility option when needed
 
-## MarshMallow 5.0
+## MarshMallow 5.0.1
 
-MarshMallow 5.0 focuses on browser-grade reliability. It fixes the hidden-toolbar regression, the first-open autocomplete race and native WebContentsView overlap with side panels. It adds Brave-style navigation-history menus, Game Mode, performance diagnostics, safer release verification, and a media detector that no longer depends on filename extensions alone.
+MarshMallow 5.0.1 adds a lightweight integrated PDF Reader while preserving the browser-grade reliability work from 5.0.0. It fixes the hidden-toolbar regression, the first-open autocomplete race and native WebContentsView overlap with side panels. It adds Brave-style navigation-history menus, Game Mode, performance diagnostics, safer release verification, and a media detector that no longer depends on filename extensions alone.
 
 The browser keeps Chromium security boundaries intact. Game Mode is not a blanket permission bypass, support links are voluntary and non-intrusive, and update metadata is pinned to the official MarshMallow GitHub Release path with SHA-256 verification.
 
