@@ -43,6 +43,12 @@ This repository is the **official public project record** for MarshMallow. It in
 - Persistent cookie manager with encrypted export/import
 - Manual native-browser compatibility option when needed
 
+## MarshMallow 5.0.2
+
+MarshMallow 5.0.2 adds per-site trusted pop-up permissions, confines the custom wallpaper to the real New Tab page, and moves the public download counter to a persistent Cloudflare Durable Object. The counter seeds itself from the official GitHub Release installer counts that are still available, then records future site downloads independently of asset replacement.
+
+The website routes installer clicks through the MarshMallow Gateway and then redirects to the exact official GitHub Release asset. Existing releases are not overwritten by the 5.0.2 publisher.
+
 ## MarshMallow 5.0.1
 
 MarshMallow 5.0.1 adds a lightweight integrated PDF Reader while preserving the browser-grade reliability work from 5.0.0. It fixes the hidden-toolbar regression, the first-open autocomplete race and native WebContentsView overlap with side panels. It adds Brave-style navigation-history menus, Game Mode, performance diagnostics, safer release verification, and a media detector that no longer depends on filename extensions alone.

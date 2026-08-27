@@ -1,3 +1,11 @@
+## 5.0.2 — trusted pop-ups, wallpaper isolation and persistent download counter
+
+- Keep wallpapers exclusive to the internal New Tab page.
+- Add per-site trusted pop-up permissions while preserving Smart blocking for unknown sites.
+- Move the public download counter from live GitHub asset summing to Cloudflare Durable Object persistence.
+- Route official website downloads through the Gateway before redirecting to GitHub.
+- Never clobber an already-published 5.0.2 Release asset.
+
 # Changelog
 
 ## 5.0.1 — PDF Reader, private-window isolation and publishing
