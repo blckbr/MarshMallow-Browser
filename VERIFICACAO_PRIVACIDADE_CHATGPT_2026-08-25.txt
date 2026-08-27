@@ -1,0 +1,41 @@
+MarshMallow Browser 5.0.0 - Verificacao da refatoracao de navegacao privada
+Data: 2026-08-25
+
+Escopo concluido no codigo-fonte:
+- BrowserContext por janela
+- sessao privada temporaria compartilhada entre superficies privadas
+- janela privada MarshMallow completa
+- Ctrl+Shift+N e menu de contexto privado
+- estado/navegacao/mute/DevTools/foco por janela
+- fullscreen e layout por BrowserContext
+- toolbar e chat bubble por janela
+- Watch Together/publisher/captura/status por BrowserContext
+- operacoes de IA, downloads UI, midia, modo jogo, permissoes e menus nativos por contexto
+- historico/session restore/closedTabs sem persistencia privada
+- downloads privados sem persistencia de URL no historico
+- limpeza de storage/cache/conexoes ao encerrar a ultima superficie privada
+
+Verificacao automatizada executada no sandbox:
+  npm run verify:source
+Resultado:
+  147 testes
+  147 passaram
+  0 falhas
+  electron/main.mjs: sintaxe OK
+  electron/preload.cjs: sintaxe OK
+  scripts/verify-5.0.mjs: PASS
+
+Build/typecheck:
+O ZIP enviado nao continha node_modules. O sandbox possui tsc global, mas nao possui
+as dependencias de tipos do projeto (@types/node e demais dependencias NPM), portanto
+o typecheck/build Vite completo nao pode ser validado neste ambiente sem reinstalar
+dependencias.
+
+Smoke final obrigatorio no Windows antes de publicar:
+1. Cookie privado aparece em outra superficie privada simultanea.
+2. Cookie normal nao aparece na sessao privada e vice-versa.
+3. Fechar a ultima superficie privada e reabrir remove o cookie privado.
+4. Fullscreen normal e privado funcionam lado a lado.
+5. Toolbar, chat bubble e Watch Together nao cruzam janelas.
+6. Download privado permanece no disco, mas sua URL nao reaparece no historico.
+7. Fechar a janela normal enquanto uma privada permanece aberta nao paralisa a privada.

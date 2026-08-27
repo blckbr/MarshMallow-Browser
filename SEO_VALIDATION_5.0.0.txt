@@ -1,0 +1,15 @@
+MarshMallow 5.0.0 - SEO Google validation
+Date: 2026-08-23
+
+Validation performed before packaging:
+- site-seo.test.mjs: 7/7 passed
+- complete npm unit suite: 94/94 passed
+- HTML files parsed: 11
+- JSON-LD blocks: valid JSON
+- sitemap.xml: valid XML
+- UTF-8 BOM scan for public HTML/XML/TXT/JSON: 0 errors
+
+The deployment itself is intentionally not performed inside the ChatGPT container.
+Use REPUBLICAR_SITE_SEO_GOOGLE_5.0.0.bat on the existing R14 root so the script
+can use the user's authenticated GitHub CLI / Cloudflare Wrangler and preserve
+release metadata from the already-published MarshMallow 5.0.0 installer.

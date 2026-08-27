@@ -1,0 +1,6 @@
+MarshMallow 4.0.12 validation
+- electron/main.mjs: node syntax OK in build environment
+- scripts/dev.mjs: node syntax OK in build environment
+- src/App.tsx: TypeScript/TSX parser syntax OK in build environment
+- wallpaper assets: 12 WebP files present under public/wallpapers
+- full npm typecheck must be run on Windows project with node_modules via VALIDAR_MARSHMALLOW_4.0.12.bat

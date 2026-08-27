@@ -1,0 +1,9 @@
+{
+  "name": "MarshMallow Downloader Manager",
+  "available": false,
+  "version": "0.0.0",
+  "url": "",
+  "protocol": "marshmallow-downloader",
+  "integration": "optional",
+  "message": "Em desenvolvimento. O gerenciador integrado do MarshMallow continua sendo o padrão."
+}

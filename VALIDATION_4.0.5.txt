@@ -1,0 +1,19 @@
+MarshMallow 4.0.5 — validação estática
+
+- OK: package 4.0.5
+- OK: Electron 4.0.5
+- OK: preload 4.0.5
+- OK: nova aba interna registrada
+- OK: home padrao interno
+- OK: migracao Google legado
+- OK: createTab roteia pagina interna
+- OK: InternalPageId inclui newtab
+- OK: NewTabPage
+- OK: barra vazia na nova aba
+- OK: omnibox permitido na nova aba
+- OK: convite wallpaper
+- OK: wallpaper nova aba
+- OK: sem backend
+
+Sintaxe verificada separadamente com node --check e TypeScript transpileModule.
+Não foi executado Electron/Windows neste ambiente Linux.

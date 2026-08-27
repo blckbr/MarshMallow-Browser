@@ -1,12 +1,12 @@
-# Never commit secrets
+node_modules/
+dist/
+release/
 .env
 .env.*
 !.env.example
-*.pem
-*.key
-*.p12
-*.pfx
-secrets/
-node_modules/
-release/
+.watch_backend_url
 *.log
+*.tmp
+.DS_Store
+Thumbs.db
+.worktrees/

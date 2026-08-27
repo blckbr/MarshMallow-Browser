@@ -1,0 +1,14 @@
+MarshMallow 3.3.2 - VALIDATION REPORT
+
+- package.json parses successfully and version is 3.3.2.
+- electron/main.mjs passes node --check.
+- electron/preload.cjs passes node --check.
+- App.tsx, types.ts, main.tsx and vite.config.ts pass TypeScript transpile syntax diagnostics.
+- Electron main process supports view-less internal tabs with marshmallow://library, marshmallow://themes and marshmallow://settings.
+- Native WebContentsView tabs are hidden while an internal MarshMallow tab is active.
+- Internal tabs support activation, closing, reordering, Ctrl+W and Ctrl+Shift+T reopening.
+- Favoritos e historico, Temas and Configuracoes sidebar buttons create internal tabs instead of floating panels.
+- Library and Themes have full-page React views; SettingsCenter renders embedded inside the active tab surface.
+- Internal pages are excluded from browsing history/bookmark actions.
+- Watch Together refuses gracefully when the current tab is an internal MarshMallow page.
+- No backend deploy is required for this desktop-only change.

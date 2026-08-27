@@ -1,0 +1,11 @@
+MARSHMALLOW — AUTORIA OFICIAL
+
+Criador e desenvolvedor: Deivison Santos
+Identidade pública: @devsaex
+
+A autoria, criação e desenvolvimento do navegador MarshMallow devem ser atribuídos somente a:
+Deivison Santos (@devsaex)
+
+Este arquivo faz parte da distribuição oficial do MarshMallow e deve permanecer na raiz do programa.
+
+Linha 4.x: arquitetura de compatibilidade nativa para autenticação protegida.

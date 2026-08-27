@@ -1,0 +1,63 @@
+<!doctype html><html lang="pt-BR"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog do MarshMallow Browser — versões e novidades</title>
+  <meta name="description" content="Acompanhe as versões, correções e principais novidades publicadas no desenvolvimento do MarshMallow Browser.">
+  <meta name="author" content="Deivison Santos (@devsaex)">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#08090d">
+  <link rel="canonical" href="https://marshmallow-browser-br.pages.dev/changelog/">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="MarshMallow Browser">
+  <meta property="og:title" content="Changelog do MarshMallow Browser — versões e novidades">
+  <meta property="og:description" content="Acompanhe as versões, correções e principais novidades publicadas no desenvolvimento do MarshMallow Browser.">
+  <meta property="og:url" content="https://marshmallow-browser-br.pages.dev/changelog/">
+  <meta property="og:image" content="https://marshmallow-browser-br.pages.dev/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MarshMallow Browser">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Changelog do MarshMallow Browser — versões e novidades">
+  <meta name="twitter:description" content="Acompanhe as versões, correções e principais novidades publicadas no desenvolvimento do MarshMallow Browser.">
+  <meta name="twitter:image" content="https://marshmallow-browser-br.pages.dev/assets/og-image.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://marshmallow-browser-br.pages.dev/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Changelog",
+      "item": "https://marshmallow-browser-br.pages.dev/changelog/"
+    }
+  ]
+}
+  </script>
+</head><body>
+<header class="site-header"><nav class="nav"><a class="brand" href="/"><img src="/assets/marshmallow-icon.png" alt=""><span>MarshMallow</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button><div class="nav-links" id="nav-links"><a href="/recursos/">Recursos</a><a href="/download/">Download</a><a href="/apoie/">Apoie</a><a href="/criador/">Créditos</a><a aria-current="page" href="/changelog/">Changelog</a><a href="/privacidade/">Privacidade</a><a href="/seguranca/">Segurança</a></div></nav></header>
+<main><section class="page-hero"><div class="container"><div class="section-kicker">Changelog</div><h1>Desenvolvimento do MarshMallow.</h1><p>Resumo das principais etapas públicas do navegador.</p></div></section><section class="section-tight"><div class="container prose">
+<div class="timeline">
+<div class="timeline-item"><time>5.0.2</time><div><h3>Pop-ups confiáveis, wallpaper isolado e contador persistente</h3><p>Restringe o wallpaper à Nova Aba, permite autorizar sites confiáveis para pop-ups sem liberar tudo globalmente e migra o contador público para um registro persistente no Cloudflare, preservando como base os downloads ainda visíveis nas Releases oficiais do GitHub.</p></div></div>
+<div class="timeline-item"><time>5.0.1</time><div><h3>PDF Reader, navegação privada e publicação 5.0.1</h3><p>Adiciona PDF Reader integrado baseado em PDF.js para PDFs da web e arquivos locais, com miniaturas sob demanda, busca, zoom, impressão e salvar cópia. Mantém a navegação privada isolada por janela e acrescenta ao site o contador acumulado de downloads oficiais das Releases do GitHub.</p></div></div>
+<div class="timeline-item"><time>5.0.0</time><div><h3>Navegação, Modo Jogo, mídia e confiabilidade</h3><p>Reorganiza a toolbar para uma única linha, adiciona histórico visual nos botões voltar/avançar, corrige a primeira abertura do autocomplete, cria Modo Jogo por domínio e diagnóstico factual de GPU/WebGL. O downloader passa a usar Content-Type e observações de rede para distinguir áudio, vídeo e HLS/DASH, reconhece MediaSource, permite combinar fluxos separados com FFmpeg e mantém DRM protegido. Também corrige o painel lateral que podia ser coberto pelo WebContentsView e adiciona apoio voluntário discreto.</p></div></div>
+<div class="timeline-item"><time>4.0.x</time><div><h3>Compatibilidade nativa de autenticação</h3><p>A linha 4.x inicia a migração do motor: fluxos de login que rejeitam navegadores incorporados podem ser entregues diretamente a um navegador de desktop real, sem falsificar User-Agent, copiar cookies ou automatizar credenciais.</p></div></div>
+<div class="timeline-item"><time>3.3.x</time><div><h3>Experiência de navegador e IA</h3><p>Central de configurações ampliada, fullscreen de vídeo, abas internas, chats com Enter/autoscroll, melhorias do MarshMallow AI, identidade oficial e menus contextuais.</p></div></div>
+<div class="timeline-item"><time>3.2.x</time><div><h3>Contas e recuperação</h3><p>Cadastro local, autenticação, recuperação por código e estabilização do armazenamento de contas.</p></div></div>
+<div class="timeline-item"><time>3.1.x</time><div><h3>Backend, identidade visual e convites</h3><p>Workers AI, endereço público do gateway, ícone oficial, menu contextual e melhorias de interface.</p></div></div>
+<div class="timeline-item"><time>3.0.x</time><div><h3>Migração para Electron</h3><p>Base do navegador desktop com WebContentsView, abas reais, sessão, favoritos, histórico, organização e recursos próprios.</p></div></div>
+</div>
+<div class="callout"><b>Versão pública de referência do site</b><p>5.0.2. O software continua em desenvolvimento e a numeração pode avançar antes da distribuição pública ampla.</p></div>
+</div></section></main><footer class="site-footer"><div class="container footer-grid"><div><div class="footer-brand"><img src="/assets/marshmallow-icon.png" alt=""><span>MarshMallow Browser</span></div><div class="footer-copy">Site oficial do MarshMallow Browser · projeto independente em desenvolvimento.</div></div><div class="footer-links"><a href="/">Início</a><a href="/recursos/">Recursos</a><a href="/download/">Download</a><a href="/criador/">Créditos</a><a href="https://github.com/blckbr/MarshMallow-Browser" rel="noopener noreferrer" target="_blank">GitHub oficial</a></div></div></footer><script src="/assets/site.js" defer></script></body></html>

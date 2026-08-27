@@ -1,0 +1,148 @@
+{
+  "name": "marshmallow-browser",
+  "productName": "MarshMallow",
+  "private": true,
+  "version": "5.0.2",
+  "description": "MarshMallow 5.0.2 — pop-ups confiáveis, wallpaper isolado e contador persistente de downloads",
+  "type": "module",
+  "main": "electron/main.mjs",
+  "scripts": {
+    "dev:web": "vite --host 127.0.0.1 --port 1421",
+    "electron:dev": "node scripts/dev.mjs",
+    "dev": "npm run electron:dev",
+    "typecheck": "tsc --noEmit",
+    "build:web": "npm run typecheck && vite build",
+    "build": "npm run build:web",
+    "dist": "npm run build:web && electron-builder --win nsis",
+    "dist:portable": "npm run build:web && electron-builder --win portable",
+    "backend:deploy": "cd backend && npx wrangler deploy",
+    "test:unit": "node --test tests/*.test.mjs",
+    "verify:source": "npm run test:unit && node --check electron/main.mjs && node --check electron/preload.cjs && node scripts/verify-5.0.2.mjs",
+    "dist:linux": "npm run build:web && electron-builder --linux rpm AppImage --x64 -c.directories.output=release-linux",
+    "dist:linux:rpm": "npm run build:web && electron-builder --linux rpm --x64 -c.directories.output=release-linux",
+    "dist:linux:appimage": "npm run build:web && electron-builder --linux AppImage --x64 -c.directories.output=release-linux"
+  },
+  "dependencies": {
+    "livekit-client": "2.22.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "qrcode": "^1.5.4",
+    "pdfjs-dist": "4.10.38"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "6.0.5",
+    "electron": "43.4.1",
+    "electron-builder": "26.15.3",
+    "typescript": "^5.9.0",
+    "vite": "8.2.2"
+  },
+  "build": {
+    "appId": "com.devsaex.marshmallow",
+    "productName": "MarshMallow",
+    "asar": true,
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "MarshMallow-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "MarshMallow",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "include": "build/installer.nsh"
+    },
+    "extraResources": [
+      {
+        "from": "build/icon.ico",
+        "to": "icon.ico"
+      },
+      {
+        "from": "build/icon.png",
+        "to": "icon.png"
+      }
+    ],
+    "extraFiles": [
+      {
+        "from": "MARSHMALLOW_CREATOR.txt",
+        "to": "MARSHMALLOW_CREATOR.txt"
+      }
+    ],
+    "protocols": [
+      {
+        "name": "MarshMallow Browser Protocol",
+        "schemes": [
+          "marshmallow"
+        ]
+      }
+    ],
+    "linux": {
+      "target": [
+        "rpm",
+        "AppImage"
+      ],
+      "category": "Network",
+      "synopsis": "Navegador independente para desktop",
+      "description": "MarshMallow Browser, navegador independente para desktop com abas verticais, privacidade, downloads, PDF Reader e recursos integrados.",
+      "maintainer": "Deivison Santos (@devsaex)",
+      "vendor": "Devsaex",
+      "icon": "build/icons",
+      "executableName": "marshmallow-browser",
+      "artifactName": "MarshMallow-Browser-${version}-${arch}.${ext}",
+      "syncDesktopName": true,
+      "mimeTypes": [
+        "text/html",
+        "x-scheme-handler/http",
+        "x-scheme-handler/https",
+        "x-scheme-handler/marshmallow"
+      ],
+      "desktop": {
+        "entry": {
+          "Name": "MarshMallow Browser",
+          "Comment": "Navegador independente para desktop",
+          "Categories": "Network;WebBrowser;",
+          "Keywords": "browser;web;internet;MarshMallow;",
+          "StartupWMClass": "com.devsaex.marshmallow",
+          "Terminal": false,
+          "Type": "Application",
+          "MimeType": "text/html;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/marshmallow;"
+        }
+      }
+    },
+    "rpm": {
+      "depends": [
+        "gtk3",
+        "libnotify",
+        "nss",
+        "libXScrnSaver",
+        "libXtst",
+        "xdg-utils",
+        "at-spi2-core",
+        "libuuid",
+        "unzip",
+        "zip"
+      ],
+      "artifactName": "MarshMallow-Browser-${version}-${arch}.${ext}"
+    }
+  },
+  "author": "Deivison Santos (@devsaex)",
+  "desktopName": "com.devsaex.marshmallow"
+}

@@ -1,0 +1,8 @@
+{
+  "available": false,
+  "version": "5.0.2",
+  "fileName": "MarshMallow-Setup-5.0.2.exe",
+  "mode": "tracked-direct",
+  "trackedUrl": "https://marshmallow-gateway.marshmallow-browser-br.workers.dev/download/windows",
+  "message": "O instalador 5.0.2 será liberado somente após build e smoke test aprovados."
+}

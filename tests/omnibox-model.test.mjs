@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {buildOmniboxSuggestions} from '../electron/lib/omnibox-model.mjs';
+test('novel term has local search candidate',()=>{const x=buildOmniboxSuggestions('google',[],[],[],false,1700000000000);assert.equal(x.at(-1).source,'search');assert.match(x.at(-1).title,/Pesquisar/);});
+test('private excludes history',()=>{const x=buildOmniboxSuggestions('example',[{url:'https://example.com',title:'Example',at:1,visits:5}],[],[],true,10);assert.equal(x.some((i)=>i.source==='history'),false);});
+test('visited pages are suggested by title or hostname',()=>{const x=buildOmniboxSuggestions('exam',[{url:'https://example.com/docs',title:'Example Docs',at:1699999990000,visits:3}],[],[],false,1700000000000);assert.equal(x[0].source,'history');assert.equal(x[0].url,'https://example.com/docs');});

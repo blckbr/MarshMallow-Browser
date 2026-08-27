@@ -1,0 +1,34 @@
+MARSHMALLOW 5.0.0 - PDF READER (FIX5)
+======================================
+
+Esta revisao remove completamente as ferramentas de edicao PDF e mantem um leitor leve.
+
+Recursos:
+- Botao PDF vermelho logo abaixo de Watch Together.
+- Nome "PDF Reader" quando a barra lateral esta expandida.
+- Botao PDF na Nova aba.
+- Tela "Faca upload do arquivo" e arrastar/soltar para PDFs locais.
+- PDFs da web abrem em nova aba marshmallow://pdf.
+- Deteccao por URL .pdf e Content-Type application/pdf.
+- Sessao normal/privada respeitada ao buscar PDFs da web.
+- Miniaturas sob demanda, navegacao por paginas, zoom e ajuste de largura/pagina.
+- Pesquisa de texto, impressao e Salvar copia.
+- Cache limitado de documentos para evitar crescimento indefinido de RAM.
+
+REMOVIDO:
+- pdf-lib.
+- Adicionar texto, destaque, desenho, assinatura e imagens.
+- Girar/excluir/duplicar/mover paginas.
+- Juntar PDFs e desfazer/refazer.
+
+INSTALACAO
+1. Feche o MarshMallow e qualquer npm run dev.
+2. Deixe o BAT FIX5 e o ZIP FIX5 na mesma pasta.
+3. Execute INSTALAR_PDF_READER_MARSHMALLOW_FIX5.bat.
+4. O instalador cria backup, remove o editor, instala somente pdfjs-dist e executa testes, typecheck e build.
+5. Se qualquer validacao falhar, o instalador faz rollback.
+
+Depois do smoke test manual:
+VALIDAR_E_COMPILAR_MARSHMALLOW_5.0.0.bat
+REGISTRAR_SMOKE_5.0.0.bat
+PUBLICAR_MARSHMALLOW_5.0.0.bat

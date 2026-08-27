@@ -1,0 +1,11 @@
+MarshMallow Browser - Microsoft Store identity
+
+Product name: MarshMallow Browser
+Package/Identity/Name: Devsaex.MarshMallowBrowser
+Package/Identity/Publisher: CN=523D70FB-BE15-4C20-AF5F-12A81A65BD6F
+Package/Properties/PublisherDisplayName: Devsaex
+Store ID: 9PG75P9FT0JN
+Package version for this submission: 5.0.0.0
+Architecture: x64
+Device family: Windows.Desktop
+Creator/Developer: Deivison Santos / @devsaex

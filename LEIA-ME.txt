@@ -1,0 +1,25 @@
+MarshMallow 5.0.0 R14 - correcao do publicador
+
+O navegador/instalador R14 NAO foi alterado.
+Este patch corrige somente a deteccao de uma GitHub Release ainda inexistente.
+
+COMO APLICAR
+1. Feche a janela do publicador anterior.
+2. Abra a pasta do MarshMallow R14 onde estao:
+   PUBLICAR_MARSHMALLOW_5.0.0.bat
+   scripts\
+   release\
+3. Copie a pasta "scripts" deste patch para essa pasta do R14.
+4. Quando o Windows perguntar, confirme a substituicao de:
+   scripts\windows-publish-5.0.ps1
+5. Execute novamente:
+   PUBLICAR_MARSHMALLOW_5.0.0.bat
+6. Digite PUBLICAR quando solicitado.
+
+NAO e necessario recompilar nem refazer o smoke test, desde que voce esteja usando a mesma pasta R14 e o mesmo instalador que ja passaram no gate.
+
+Comportamento corrigido:
+- se v5.0.0 nao existe, cria a GitHub Release;
+- se v5.0.0 ja existe, atualiza os assets;
+- depois verifica a Release;
+- so entao ativa release.json e publica o Cloudflare Pages.

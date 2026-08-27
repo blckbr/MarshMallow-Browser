@@ -1,0 +1,8 @@
+MarshMallow 4.0.7 — validação estática
+
+- OK: package version 4.0.7
+- OK: electron/main.mjs passa em node --check
+- OK: electron/preload.cjs passa em node --check
+- OK: electron/omnibox-preload.cjs passa em node --check
+- OK: App.tsx analisado pelo TypeScript sem erros de sintaxe; dependências React não estão instaladas neste ambiente Linux, portanto o typecheck completo deve ser executado no Windows pelo BAT de validação.
+- Alteração: dropdown da omnibox movido do DOM do shell para WebContentsView nativo sobre a aba ativa.

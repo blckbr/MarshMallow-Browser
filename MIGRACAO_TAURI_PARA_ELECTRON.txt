@@ -1,0 +1,14 @@
+MARSHMALLOW 3.0
+
+O projeto agora usa Electron como runtime principal.
+
+Não copie src-tauri para esta versão.
+Não execute npm run tauri dev.
+
+Use:
+  INICIAR_MARSHMALLOW_ELECTRON.bat
+
+Para instalador:
+  CRIAR_INSTALADOR_ELECTRON.bat
+
+O Watch Together usa WebFrameMain como fonte de vídeo e áudio.

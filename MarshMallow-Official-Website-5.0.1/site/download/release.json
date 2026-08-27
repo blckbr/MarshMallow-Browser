@@ -1,0 +1,7 @@
+{
+  "available": false,
+  "version": "5.0.1",
+  "fileName": "MarshMallow-Setup-5.0.1.exe",
+  "mode": "direct",
+  "message": "O instalador 5.0.1 será liberado somente após build e smoke test aprovados."
+}

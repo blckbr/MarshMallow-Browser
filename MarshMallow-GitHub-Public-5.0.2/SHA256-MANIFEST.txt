@@ -1,0 +1,5 @@
+# MarshMallow public provenance manifest
+# Current protected-source archive hash for 4.1.0 (archive itself is not published in this repository)
+72b70150c772d23a0f8c4bdca2a9af4040850efc800c3f80e57e8762382b192b  MarshMallow_4.1.0_SOURCE_READY_TO_BUILD.zip
+
+# Historical preserved release hashes remain in legal/SHA256-MANIFEST.txt

@@ -1,0 +1,13 @@
+MarshMallow 4.0.6 — validação estática
+
+- OK: package 4.0.6
+- OK: Electron main 4.0.6
+- OK: preload 4.0.6
+- OK: Escape na barra restaura a URL real da aba ativa
+- OK: marshmallow://newtab restaura a barra para vazio
+- OK: Escape fecha sugestões e remove foco da barra
+- OK: hint "Esc restaurar URL" presente no omnibox
+- OK: node --check passou em main/preloads/backend/dev script
+- OK: TypeScript transpileModule sem erros em App.tsx, main.tsx, types.ts, watch-host.ts e vite.config.ts
+
+Observação: build Windows/NSIS deve ser executado no Windows do proprietário antes da distribuição.

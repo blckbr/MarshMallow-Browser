@@ -1,0 +1,10 @@
+MarshMallow Browser 5.0.0 — registro público oficial
+
+Este diretório contém o registro público do projeto, notas de versão, créditos e documentos legais.
+O código-fonte proprietário completo do navegador não faz parte deste repositório público.
+
+Site oficial: https://marshmallow-browser-br.pages.dev/
+Download: https://marshmallow-browser-br.pages.dev/download/
+Apoio voluntário: https://marshmallow-browser-br.pages.dev/apoie/
+
+Criação e desenvolvimento: Deivison Santos — @devsaex

@@ -1,0 +1,9 @@
+MARSHMALLOW PROPRIETARY LICENSE NOTICE
+
+Copyright (c) 2026 Deivison Santos. All rights reserved.
+
+The complete MarshMallow Browser source code is not licensed for copying, redistribution, sale, relicensing, publication, or creation of derivative products except where the copyright holder has granted prior written permission.
+
+Use of publicly distributed MarshMallow executable builds is subject to the terms presented with those builds.
+
+Third-party dependencies remain governed by their respective licenses.

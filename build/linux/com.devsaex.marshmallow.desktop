@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=MarshMallow Browser
+Comment=Navegador independente para desktop
+Exec=marshmallow-browser %U
+Icon=com.devsaex.marshmallow
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/marshmallow;
+StartupWMClass=com.devsaex.marshmallow
+Keywords=browser;web;internet;MarshMallow;

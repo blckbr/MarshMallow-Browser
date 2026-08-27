@@ -1,0 +1,20 @@
+MarshMallow 5.0.0 R14 - correcao final do publicador
+
+O log anterior confirmou que:
+- GitHub Release v5.0.0 foi criada;
+- MarshMallow-Setup-5.0.0.exe foi enviado;
+- SHA-256 foi enviado;
+- Cloudflare Pages concluiu o deploy.
+
+A falha ocorreu somente na verificacao final do dominio principal: o PowerShell tentou acessar a propriedade .version em uma resposta que ainda nao era o JSON esperado.
+
+Este patch:
+1. corrige scripts\windows-publish-5.0.ps1 para aguardar ate 90 segundos a propagacao dos JSONs publicos;
+2. valida os campos com seguranca antes de acessa-los;
+3. inclui VERIFICAR_PUBLICACAO_5.0.0.bat, que e SOMENTE LEITURA e nao faz push, upload nem deploy.
+
+Para verificar a publicacao que ja ocorreu:
+- copie este patch para a raiz do pacote R14, preservando a pasta scripts;
+- execute VERIFICAR_PUBLICACAO_5.0.0.bat.
+
+Nao e necessario recompilar o navegador nem repetir o smoke test.

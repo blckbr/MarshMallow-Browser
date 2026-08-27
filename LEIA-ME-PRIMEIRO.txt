@@ -1,10 +1,34 @@
-MarshMallow Browser 5.0.0 — registro público oficial
+MARSHMALLOW BROWSER 5.0.0 - MICROSOFT STORE MSIX BUILDER
+Criador/Desenvolvedor: Deivison Santos / @devsaex
 
-Este diretório contém o registro público do projeto, notas de versão, créditos e documentos legais.
-O código-fonte proprietário completo do navegador não faz parte deste repositório público.
+OBJETIVO
+Gerar um MSIX x64 para a primeira submissao do MarshMallow Browser no Partner Center.
 
-Site oficial: https://marshmallow-browser-br.pages.dev/
-Download: https://marshmallow-browser-br.pages.dev/download/
-Apoio voluntário: https://marshmallow-browser-br.pages.dev/apoie/
+IDENTIDADE DA STORE USADA
+Name: Devsaex.MarshMallowBrowser
+Publisher: CN=523D70FB-BE15-4C20-AF5F-12A81A65BD6F
+PublisherDisplayName: Devsaex
+Store ID: 9PG75P9FT0JN
+Version: 5.0.0.0
+Architecture: x64
+Target: Windows.Desktop
 
-Criação e desenvolvimento: Deivison Santos — @devsaex
+COMO USAR
+1. Extraia esta pasta no Windows.
+2. Certifique-se de que o MarshMallow 5.0.0 esta instalado OU tenha uma pasta win-unpacked/build com MarshMallow.exe.
+3. Execute GERAR_MSIX_STORE.bat.
+4. Confirme o MarshMallow.exe detectado ou cole manualmente o caminho correto.
+5. O script instala a CLI oficial winapp pelo WinGet se necessario.
+6. O resultado sera:
+   output\MarshMallow-Browser-5.0.0-x64.msix
+   output\MarshMallow-Browser-5.0.0-x64.msix.sha256.txt
+7. No Partner Center, em Pacotes, clique em "browse your files" e selecione o MSIX.
+
+IMPORTANTE
+- O pacote fica SEM assinatura de distribuicao. Isso e intencional para submissao: a Microsoft Store assina o MSIX aprovado.
+- O script NAO clica em "Enviar para certificacao" e NAO altera sua submissao no Partner Center.
+- O script aborta se o executavel nao for x64 ou se a identidade interna do MSIX nao corresponder aos valores reservados na Store.
+- O script remove apenas desinstaladores NSIS da copia de staging; ele nao altera sua instalacao original.
+
+SE DER ERRO
+Copie todo o texto da janela e envie ao ChatGPT. Nao tente mudar Publisher/Name/Version manualmente.

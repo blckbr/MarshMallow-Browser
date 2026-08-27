@@ -1,0 +1,42 @@
+MarshMallow 5.0.0 - STATUS DE VALIDACAO
+========================================
+
+Commit verificado:
+65b2fc2d417ebb297ac567dd2f99d0b70de5b2d0
+
+Validacao executada neste ambiente:
+- npm run verify:source: PASS
+- 52 testes Node: 52 PASS / 0 FAIL
+- node --check nos preloads/runtime principais: PASS
+- transpile sintatico TypeScript/TSX: PASS
+- JSON do site: PASS
+- git diff --check: PASS
+- marcadores de conflito: nenhum
+- varredura de padroes de segredos: PASS
+- worktree Git: limpo
+
+Principais gates cobertos:
+- toolbar 5.0 em uma linha
+- autocomplete/omnibox com readiness + replay
+- historico Voltar/Avancar estilo Brave
+- Game Mode e Game Scheduler
+- diagnostico de GPU/desempenho
+- geometria de paines/WebContentsView
+- detector de midia por Content-Type/MediaSource/HLS/DASH
+- video + audio/FFmpeg quando aplicavel
+- DRM sem bypass
+- gerenciador de downloads integrado normal + Ctrl+J
+- integracao opcional reservada ao MarshMallow Downloader Manager
+- support links sem nag
+- validacao de release/update por origem oficial + SHA-256
+
+Gate que ESTE ambiente nao pode substituir:
+- build real Vite/TypeScript com dependencias npm instaladas
+- electron-builder/NSIS Windows
+- runtime smoke em Windows
+- publicacao autenticada no GitHub e Cloudflare
+
+Motivo:
+O ambiente atual nao tem node_modules/cache npm e o registry npm apresentou EAI_AGAIN. Alem disso, o smoke do executavel Windows deve ser feito no Windows real. O release.json permanece fail-closed (available=false) ate esses gates passarem.
+
+Os scripts Windows do pacote bloqueiam a publicacao se o build ou o smoke nao corresponderem ao mesmo EXE/SHA-256.

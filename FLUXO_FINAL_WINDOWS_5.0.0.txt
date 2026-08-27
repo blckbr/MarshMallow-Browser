@@ -1,0 +1,31 @@
+MarshMallow 5.0.0 - FLUXO FINAL WINDOWS
+=======================================
+
+Na pasta MarshMallow-5.0.0, execute nesta ordem:
+
+1) VALIDAR_E_COMPILAR_MARSHMALLOW_5.0.0.bat
+   - instala dependencias npm
+   - roda 52+ testes/verificacao de fonte
+   - roda TypeScript real
+   - gera o build Vite
+   - gera MarshMallow-Setup-5.0.0.exe via NSIS
+   - calcula SHA-256
+   - cria BUILD_VALIDATION_5.0.0.json
+
+2) Instale/abra o EXE criado e execute:
+   REGISTRAR_SMOKE_5.0.0.bat
+   Confirme S apenas para itens realmente testados.
+   Qualquer N bloqueia a publicacao.
+
+3) Depois de TODO smoke passar, execute:
+   PUBLICAR_MARSHMALLOW_5.0.0.bat
+   Ele exige gh.exe autenticado e Wrangler/npx configurado.
+   Publica o registro publico em blckbr/MarshMallow-Browser,
+   cria/atualiza a Release v5.0.0, envia EXE + SHA,
+   so entao ativa release.json e publica o Cloudflare Pages.
+
+4) Opcionalmente confirme tudo com:
+   DIAGNOSTICAR_MARSHMALLOW_5.0.0.bat
+
+IMPORTANTE:
+Nao edite o EXE entre as etapas 1, 2 e 3. Build report e smoke report ficam presos ao mesmo SHA-256.

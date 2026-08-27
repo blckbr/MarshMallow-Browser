@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {computeContentBounds} from '../electron/lib/geometry.mjs';
+test('media dock reserves its full native width',()=>{const r=computeContentBounds({windowWidth:1665,windowHeight:548,shell:true,sidebarWidth:72,toolbarHeight:56,dock:{mode:'media',width:420}});assert.equal(r.dock.width,420);assert.equal(r.page.x+r.page.width,r.dock.x);assert.equal(r.dock.x+r.dock.width,1665);});
+test('no dock gives page all available width',()=>{const r=computeContentBounds({windowWidth:1200,windowHeight:800,shell:true,sidebarWidth:72,toolbarHeight:56,dock:{mode:'none',width:0}});assert.equal(r.dock,null);assert.equal(r.page.width,1128);});

@@ -1,0 +1,6 @@
+/* MarshMallow Browser */
+Creator and developer: Deivison Santos
+Public identity: @devsaex
+Project: MarshMallow Browser
+Official site: https://marshmallow-browser-br.pages.dev/
+Language: pt-BR

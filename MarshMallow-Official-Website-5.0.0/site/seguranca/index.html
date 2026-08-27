@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Segurança do MarshMallow Browser — verificações e atualizações</title>
+  <meta name="description" content="Conheça as práticas públicas de segurança do MarshMallow Browser: Release oficial, SHA-256, limites do Chromium, extensões e orientações de verificação.">
+  <meta name="author" content="Deivison Santos (@devsaex)">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#08090d">
+  <link rel="canonical" href="https://marshmallow-browser-br.pages.dev/seguranca/">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="MarshMallow Browser">
+  <meta property="og:title" content="Segurança do MarshMallow Browser — verificações e atualizações">
+  <meta property="og:description" content="Conheça as práticas públicas de segurança do MarshMallow Browser: Release oficial, SHA-256, limites do Chromium, extensões e orientações de verificação.">
+  <meta property="og:url" content="https://marshmallow-browser-br.pages.dev/seguranca/">
+  <meta property="og:image" content="https://marshmallow-browser-br.pages.dev/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MarshMallow Browser">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Segurança do MarshMallow Browser — verificações e atualizações">
+  <meta name="twitter:description" content="Conheça as práticas públicas de segurança do MarshMallow Browser: Release oficial, SHA-256, limites do Chromium, extensões e orientações de verificação.">
+  <meta name="twitter:image" content="https://marshmallow-browser-br.pages.dev/assets/og-image.jpg">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://marshmallow-browser-br.pages.dev/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Segurança",
+      "item": "https://marshmallow-browser-br.pages.dev/seguranca/"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header"><nav class="nav" aria-label="Navegação principal"><a class="brand" href="/" aria-label="MarshMallow Browser - início"><img src="/assets/marshmallow-icon.png" alt="" width="42" height="42"><span>MarshMallow</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button><div class="nav-links" id="nav-links"><a href="/recursos/">Recursos</a><a href="/download/">Download</a><a href="/changelog/">Changelog</a><a href="/privacidade/">Privacidade</a><a aria-current="page" href="/seguranca/">Segurança</a><a href="/criador/">Créditos</a></div></nav></header>
+<main id="conteudo">
+<section class="page-hero"><div class="container"><div class="section-kicker">Segurança</div><h1>Verificação pública, sem promessas vagas.</h1><p>Esta página explica como a distribuição oficial do MarshMallow é verificada e quais limites de segurança o projeto preserva.</p></div></section>
+<section class="section-tight"><div class="container prose">
+<h2>Download e integridade do instalador</h2>
+<p>O download oficial é associado à <a href="https://github.com/blckbr/MarshMallow-Browser" rel="noopener noreferrer" target="_blank">página pública do projeto no GitHub</a>. A página de download publica versão, tamanho e SHA-256 do instalador para que o arquivo possa ser conferido antes da execução.</p>
+<p>No PowerShell do Windows, a conferência pode ser feita com:</p>
+<pre><code>Get-FileHash .\MarshMallow-Setup-5.0.0.exe -Algorithm SHA256</code></pre>
+<p>O resultado deve ser comparado com o SHA-256 mostrado na <a href="/download/">página oficial de download</a>.</p>
+<h2>Limites de segurança do Chromium</h2>
+<p>O MarshMallow não trata recursos como Modo Jogo ou compatibilidade como autorização para desligar indiscriminadamente as proteções do Chromium. Recursos de mídia também não são apresentados como forma de remover ou contornar DRM.</p>
+<h2>Extensões e Modo desenvolvedor</h2>
+<p>Extensões instaladas de fontes externas podem executar código com as permissões concedidas pelo navegador. Use o Modo desenvolvedor somente para pacotes em que você confia e revise as permissões solicitadas.</p>
+<h2>Privacidade e permissões</h2>
+<p>As informações públicas de privacidade ficam na página <a href="/privacidade/">Privacidade</a>. Permissões sensíveis devem continuar sob controle do usuário e do mecanismo Chromium/Electron utilizado pelo aplicativo.</p>
+<h2>Relatar um problema</h2>
+<p>Para acompanhar o registro público do projeto e reportar um problema técnico, use o <a href="https://github.com/blckbr/MarshMallow-Browser" rel="noopener noreferrer" target="_blank">repositório oficial do MarshMallow Browser</a>. Não publique senhas, tokens, cookies ou outros segredos em relatos públicos.</p>
+<div class="callout"><b>Importante.</b><p>Nenhum software é imune a falhas. Esta página descreve mecanismos verificáveis do projeto e não substitui práticas normais de segurança do Windows.</p></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-grid"><div><div class="footer-brand"><img src="/assets/marshmallow-icon.png" alt=""><span>MarshMallow Browser</span></div><div class="footer-copy">Site oficial do MarshMallow Browser · projeto independente em desenvolvimento.</div></div><div class="footer-links"><a href="/">Início</a><a href="/download/">Download</a><a href="/privacidade/">Privacidade</a><a href="/seguranca/">Segurança</a><a href="https://github.com/blckbr/MarshMallow-Browser" rel="noopener noreferrer" target="_blank">GitHub oficial</a></div></div></footer>
+<script src="/assets/site.js" defer></script>
+</body></html>

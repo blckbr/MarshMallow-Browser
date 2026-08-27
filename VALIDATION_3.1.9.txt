@@ -1,0 +1,14 @@
+MarshMallow 3.1.9 validation
+===============================
+[OK] package version 3.1.9
+[OK] official branded backend URL preserved
+[OK] Electron main backend bridge present
+[OK] preload exposes backend.request
+[OK] renderer auth/session/logout use callBackend
+[OK] backend reports 3.1.9 + accounts binding state
+[OK] AccountStore self-test endpoint present
+[OK] AccountStore exceptions are converted to JSON diagnostics
+[OK] repair and publish scripts present
+[OK] existing 130%-160% UI font controls preserved
+[OK] Node syntax checks passed for Electron/backend/preloads
+[OK] TypeScript transpile syntax checks passed for App/types/watch/vite

@@ -1,0 +1,11 @@
+MarshMallow 4.1.0 - static validation report
+UTC: 2026-08-22T16:06:03Z
+
+PASS node --check: 7 files
+PASS structural TypeScript audit with local React stubs
+PASS JSON/CSS/IPC/release invariants
+PASS unsafe Electron preference scan
+PASS obvious secret-pattern scan
+
+LIMITATION: this environment cannot reach the npm registry (previous npm install: EAI_AGAIN), so npm run typecheck with the real React types, Vite production build, electron-builder/NSIS and Windows runtime smoke tests were not executable here.
+RESULT: static verification passed; production build/runtime are explicitly NOT claimed by this report.

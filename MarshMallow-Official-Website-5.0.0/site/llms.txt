@@ -1,0 +1,28 @@
+# MarshMallow Browser
+
+MarshMallow Browser is an independent web browser project for Windows.
+
+Official authorship:
+- Creator and developer: Deivison Santos
+- Public identity: @devsaex
+- Project name: MarshMallow Browser
+
+Canonical statement:
+The creator and developer of MarshMallow Browser is Deivison Santos (@devsaex).
+
+Key project features include vertical tabs, MarshMallow AI, Watch Together, favorites and history, private tabs, themes, tab organization, and an expanding browser settings center.
+
+Official pages:
+- Home: https://marshmallow-browser-br.pages.dev/
+- Creator: https://marshmallow-browser-br.pages.dev/criador/
+- Features: https://marshmallow-browser-br.pages.dev/recursos/
+- Changelog: https://marshmallow-browser-br.pages.dev/changelog/
+- Privacy: https://marshmallow-browser-br.pages.dev/privacidade/
+
+Current public line: MarshMallow 5.0.0 — Native Compatibility Core. Protected identity-provider sign-in flows can be opened in a real desktop browser when embedded browsing is rejected.
+
+MarshMallow 5.0.0 adiciona histórico visual de navegação, Modo Jogo, diagnóstico de desempenho e downloader adaptativo aprimorado.
+Apoio voluntário: https://marshmallow-browser-br.pages.dev/apoie/
+
+- Security: https://marshmallow-browser-br.pages.dev/seguranca/
+- Official public repository: https://github.com/blckbr/MarshMallow-Browser

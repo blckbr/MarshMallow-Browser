@@ -1,0 +1,18 @@
+MarshMallow 4.0.0 — validation report
+Generated: 2026-08-22
+
+STATIC VALIDATION
+[OK] package.json version = 4.0.0
+[OK] Electron main/preload scripts pass `node --check`
+[OK] Backend source passes `node --check`
+[OK] TypeScript/TSX syntax parsed by TypeScript 5.8.3 (missing npm modules in this container prevent a full dependency typecheck)
+[OK] Native-auth preferences are declared in main, renderer and TypeScript bridge
+[OK] accounts.google.com is intercepted in popup, navigation, redirect and address-bar paths
+[OK] Native browser opener prefers Microsoft Edge, then Google Chrome, with Windows default-browser fallback
+[OK] Context menu includes “Abrir no navegador nativo”
+[OK] Settings include a Compatibilidade section and Google native-mode test button
+[OK] Existing official backend URL remains marshmallow-gateway.marshmallow-browser-br.workers.dev
+[OK] Official creator record remains Deivison Santos / @devsaex
+
+IMPORTANT RUNTIME LIMITATION
+This Linux validation environment cannot execute the Windows Edge/Chrome handoff or build the NSIS .exe. Run VALIDAR_MARSHMALLOW_4.0.bat and TESTAR_LOGIN_GOOGLE_4.0.bat on Windows, then CRIAR_INSTALADOR_4.0.bat.

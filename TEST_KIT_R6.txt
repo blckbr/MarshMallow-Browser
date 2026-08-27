@@ -1,0 +1,14 @@
+MarshMallow 5.0.0 - Windows Test Kit R6
+
+Commit: 40ff6a48d232dcf4a034a68d9cb9c95f5d5e466c
+
+Correção específica deste kit:
+- evita acesso a WebContents já liberado durante applyGameScheduler no encerramento;
+- o Game Scheduler retorna imediatamente durante shutdown;
+- abas cujo WebContents já foi destruído são ignoradas com segurança.
+
+Teste principal no Windows:
+1. Compile/instale esta versão.
+2. Abra algumas abas normalmente (inclusive uma página que ative ou possa ativar Game Mode).
+3. Feche o MarshMallow pelo X.
+4. Não deve surgir a janela "A JavaScript error occurred in the main process".

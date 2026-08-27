@@ -1,0 +1,20 @@
+MARSHMALLOW 4.0 - NOTAS DA MIGRACAO
+====================================
+
+Objetivo principal desta etapa:
+- parar de tentar autenticar Google/Microsoft/Apple dentro de um WebContentsView;
+- usar um navegador de desktop suportado quando o provedor exige isso;
+- preservar toda a interface e os recursos construidos na linha 3.x;
+- nao copiar cookies, senhas ou tokens de Chrome/Edge;
+- nao usar CEF/WebView2 como falsa solucao, pois continuam sendo navegadores incorporados.
+
+O MarshMallow 4.0 detecta endpoints protegidos como accounts.google.com e os
+abre no navegador nativo escolhido em Configuracoes > Compatibilidade.
+
+Esta arquitetura e uma ponte de migracao. O renderer geral da linha 4.0.0 ainda
+mantem o nucleo Electron/Chromium para preservar IA, Watch Together, abas,
+historico, temas, configuracoes, captura de pagina e demais integracoes.
+
+Uma futura troca total do renderer exige manter um fork completo de Chromium,
+com pipeline de compilacao, sandbox, codecs, atualizacoes de seguranca e testes.
+Isso nao deve ser simulado trocando apenas o User-Agent.

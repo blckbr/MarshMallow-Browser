@@ -1,0 +1,4 @@
+# Desenvolvimento local apenas. Em produção use CONFIGURAR_LIVEKIT_2.0.bat
+LIVEKIT_URL=wss://seu-projeto.livekit.cloud
+LIVEKIT_API_KEY=APIxxxxxxxx
+LIVEKIT_API_SECRET=seu-secret

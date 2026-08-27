@@ -1,0 +1,20 @@
+MarshMallow 3.2.0 validation
+
+[OK] package version 3.2.0
+[OK] electron version 3.2.0
+[OK] preload version 3.2.0
+[OK] official backend domain
+[OK] fresh account registry
+[OK] account exception boundary
+[OK] recovery backend route
+[OK] recovery code generator
+[OK] password PBKDF2
+[OK] recovery rotates sessions
+[OK] recovery UI
+[OK] native route allows recovery
+[OK] AccountStore binding
+[OK] publish script
+[OK] repair script
+[OK] installer 3.2.0
+
+Runtime logic test: AccountStore register/login/recover/session completed successfully with an in-memory Durable Object storage mock.

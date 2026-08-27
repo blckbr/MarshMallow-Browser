@@ -1,0 +1,13 @@
+MarshMallow 4.0.2 validation
+============================
+- electron/main.mjs: node --check OK
+- electron/preload.cjs: node --check OK
+- src/App.tsx: TypeScript transpile diagnostics OK
+- src/main.tsx: TypeScript transpile diagnostics OK
+- src/types.ts: TypeScript transpile diagnostics OK
+- package version: 4.0.2
+- Google compatibility: no global app.userAgentFallback override
+- Google pages: native runtime UA is applied
+- Other pages: clean Chromium UA remains available per WebContents
+- Google /sorry/: no CAPTCHA automation/bypass or alternate-search popup
+- Native authentication mode preserved

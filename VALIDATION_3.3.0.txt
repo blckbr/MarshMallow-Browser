@@ -1,0 +1,31 @@
+MarshMallow 3.3.0 - VALIDATION REPORT
+=====================================
+
+Validated in the build workspace:
+- package.json parses successfully and version is 3.3.0.
+- electron/main.mjs passes `node --check`.
+- electron/preload.cjs passes `node --check`.
+- backend/src/index.js passes `node --check`.
+- TypeScript/TSX syntax transpilation passed for:
+  - src/App.tsx
+  - src/main.tsx
+  - src/types.ts
+  - src/watch-host.ts
+  - vite.config.ts
+- Browser preferences IPC is present in main/preload/types.
+- Settings Center contains categories for profile, startup, appearance, search,
+  tabs/navigation, privacy/security, site permissions, downloads, languages,
+  performance, system/network, MarshMallow AI, Watch Together, advanced, and about.
+- New persistent browser preferences are saved in browser-preferences.json under
+  Electron userData.
+- Clipboard sanitized writes remain allowed so normal copy/write behavior is not
+  accidentally broken by the global clipboard-read permission control.
+- Official backend URL remains:
+  https://marshmallow-gateway.marshmallow-browser-br.workers.dev
+- Backend account version remains 3.2.3; no backend redeploy is required solely
+  for the 3.3.0 desktop settings update.
+
+Environment limitation:
+A complete Windows NSIS installer was not built in this Linux validation
+workspace. Build the Windows installer on the project Windows PC with
+CRIAR_INSTALADOR_ELECTRON.bat.

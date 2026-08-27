@@ -1,0 +1,17 @@
+MarshMallow 3.1.8 static validation
+
+[OK] package version 3.1.8
+[OK] main version 3.1.8
+[OK] preload version 3.1.8
+[OK] font setting field
+[OK] default font scale 130%
+[OK] font slider 100-160%
+[OK] font scale persisted through settings
+[OK] root font default 20.8px
+[OK] UI fonts converted to rem
+[OK] no old ui font multiplier
+[OK] branded backend preserved
+[OK] context menu preserved
+[OK] electron binary repair preserved
+
+Runtime JS syntax: electron/main.mjs, preload.cjs, scripts/dev.mjs, backend/src/index.js = OK

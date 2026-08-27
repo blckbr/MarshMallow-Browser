@@ -1,0 +1,19 @@
+MarshMallow 4.0.11 validation
+Date: 2026-08-22
+
+PASS - electron/main.mjs Node syntax
+PASS - electron/preload.cjs Node syntax
+PASS - electron/omnibox-preload.cjs Node syntax
+PASS - scripts/dev.mjs Node syntax
+PASS - App.tsx TypeScript/JSX syntax transpilation
+PASS - types.ts TypeScript syntax transpilation
+PASS - version consistency (main/package)
+PASS - explicit restore-tabs UI present
+PASS - private tabs excluded from persisted session
+PASS - debounced session autosave present
+PASS - bottom-right "Escolher outro wallpaper" control present
+PASS - wallpaper removal available
+PASS - six local wallpaper suggestions present
+PASS - Settings > Appearance wallpaper controls present
+
+Note: full npm typecheck/build requires the project node_modules on Windows.

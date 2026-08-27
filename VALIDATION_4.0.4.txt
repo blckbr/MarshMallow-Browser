@@ -1,0 +1,14 @@
+MarshMallow 4.0.4 — validação estática
+
+- package.json: 4.0.4
+- electron/main.mjs: node --check OK
+- electron/preload.cjs: node --check OK
+- src/App.tsx: TypeScript transpileModule sem erros de sintaxe
+- src/main.tsx: TypeScript transpileModule sem erros de sintaxe
+- src/types.ts: TypeScript transpileModule sem erros de sintaxe
+- src/watch-host.ts: TypeScript transpileModule sem erros de sintaxe
+- Omnibox: histórico/favoritos/abas + ranking local + frequência/recência
+- Navegação: ArrowUp/ArrowDown/Tab/Enter/Escape
+- Privacidade: histórico normal omitido das sugestões em aba privada
+- Spellcheck: dictionarySuggestions + replaceMisspelling + addWordToSpellCheckerDictionary
+- Preferência: addressSuggestionsEnabled persistida no browser-preferences.json

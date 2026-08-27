@@ -1,0 +1,26 @@
+MarshMallow 4.0.3 validation
+==============================
+
+Validated in build workspace:
+- package version 4.0.3
+- Electron main syntax: OK (node --check)
+- Electron preload syntax: OK (node --check)
+- App.tsx TypeScript/JSX syntax via TypeScript transpile diagnostics: OK
+- types.ts TypeScript syntax via TypeScript transpile diagnostics: OK
+- persistent partition: persist:marshmallow
+- storage-access permission handling: present
+- top-level-storage-access permission handling: present
+- Google/YouTube auth popup same-tab path: present
+- cookie list/save/delete/clear IPC: present
+- encrypted cookie export/import IPC: present
+- backup encryption: AES-256-GCM
+- backup key derivation: PBKDF2-SHA256, 180000 iterations
+- cookie encryption round-trip smoke test: OK
+- installer target updated to MarshMallow-Setup-4.0.3.exe
+
+Not validated in this Linux/container environment:
+- live Google/YouTube login flow in Windows Electron
+- full npm install / electron-builder Windows installer
+- real Chromium cookie database persistence across Windows restarts
+
+The package intentionally includes TESTAR_LOGIN_GOOGLE_4.0.3.bat so the login/persistence behavior can be verified before creating the installer.

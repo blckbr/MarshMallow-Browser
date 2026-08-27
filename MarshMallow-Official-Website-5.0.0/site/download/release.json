@@ -1,0 +1,13 @@
+{
+    "available":  true,
+    "version":  "5.0.0",
+    "fileName":  "MarshMallow-Setup-5.0.0.exe",
+    "url":  "https://github.com/blckbr/MarshMallow-Browser/releases/download/v5.0.0/MarshMallow-Setup-5.0.0.exe",
+    "releaseUrl":  "https://github.com/blckbr/MarshMallow-Browser/releases/tag/v5.0.0",
+    "mode":  "direct",
+    "size":  110262962,
+    "sizeBytes":  110262962,
+    "sizeHuman":  "105,15 MB",
+    "sha256":  "61eb7be5d42c9a2e31168964d21aa096e2808f1cae2d750bac18ec0a47a45e37",
+    "publishedAt":  "2026-08-23T15:42:06.0876601Z"
+}

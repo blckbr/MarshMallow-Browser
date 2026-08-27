@@ -1,0 +1,12 @@
+MarshMallow 3.3.1 - VALIDATION REPORT
+
+- electron/main.mjs parses successfully with node --check.
+- electron/preload.cjs parses successfully with node --check.
+- package.json parses successfully and version is 3.3.1.
+- Every tab WebContents listens for enter-html-full-screen and leave-html-full-screen.
+- During HTML fullscreen, the active WebContentsView is resized to x=0/y=0 and the complete BrowserWindow content bounds.
+- Other native tab views are hidden while the video is fullscreen.
+- The floating Watch Together chat bubble is hidden in HTML fullscreen.
+- Normal browser bounds are restored on leaving fullscreen.
+- Resize events continue to recalculate fullscreen bounds, preventing stale borders/toolbar overlap during the native fullscreen transition.
+- No backend change is required.

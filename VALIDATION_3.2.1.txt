@@ -1,0 +1,10 @@
+MarshMallow 3.2.1 validation
+
+[OK] package version 3.2.1
+[OK] Electron main/preload 3.2.1
+[OK] backend health version 3.2.1
+[OK] official workers.dev URL preserved
+[OK] deploy no longer embeds CMD-escaped pipes/redirections inside PowerShell -Command
+[OK] Wrangler deploy output captured directly by CMD
+[OK] HTTP/backend checks isolated in scripts/validate-backend-3.2.1.ps1
+[OK] recovery/account flow from 3.2.0 preserved

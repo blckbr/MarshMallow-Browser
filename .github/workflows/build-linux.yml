@@ -1,0 +1,213 @@
+name: Build MarshMallow Linux RPM and AppImage
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'linux-rpm-5.0.2-*'
+    tags:
+      - 'v5.0.2-linux*'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: marshmallow-linux-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-linux:
+    name: Fedora / RHEL family packages
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+
+    env:
+      ELECTRON_CACHE: ${{ github.workspace }}/.cache/electron
+      ELECTRON_BUILDER_CACHE: ${{ github.workspace }}/.cache/electron-builder
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Cache Electron downloads
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/electron
+            .cache/electron-builder
+          key: linux-electron-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            linux-electron-${{ runner.os }}-
+
+      - name: Install Linux build and smoke-test prerequisites
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y \
+            rpm \
+            xvfb \
+            xauth \
+            zip \
+            unzip \
+            xdg-utils \
+            libopenjp2-tools \
+            libgtk-3-0t64 \
+            libnss3 \
+            libasound2t64 \
+            libatk-bridge2.0-0 \
+            libatspi2.0-0 \
+            libgbm1 \
+            libxss1 \
+            libxtst6 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxrandr2 \
+            libxshmfence1 \
+            libdrm2
+
+      - name: Install Node dependencies
+        shell: bash
+        run: npm ci --no-audit --no-fund
+
+      - name: Verify Linux source
+        shell: bash
+        run: ./scripts/linux/verify-linux.sh
+
+      - name: Build RPM
+        shell: bash
+        run: ./scripts/linux/build-rpm.sh
+
+      - name: Build AppImage
+        shell: bash
+        run: ./scripts/linux/build-appimage.sh
+
+      - name: Build unpacked runtime for smoke test
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx electron-builder --linux dir --x64 -c.directories.output=release-linux
+          test -x release-linux/linux-unpacked/marshmallow-browser
+
+      - name: Configure Chromium sandbox for isolated smoke runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          SANDBOX=release-linux/linux-unpacked/chrome-sandbox
+          if [[ -f "$SANDBOX" ]]; then
+            sudo chown root:root "$SANDBOX"
+            sudo chmod 4755 "$SANDBOX"
+          fi
+
+      - name: Run Linux smoke test under Xvfb
+        shell: bash
+        run: ./scripts/linux/smoke-linux.sh
+
+      - name: Verify generated RPM metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          RPM=release-linux/MarshMallow-Browser-5.0.2-x86_64.rpm
+          test -s "$RPM"
+          rpm -qip "$RPM"
+          rpm -qlp "$RPM" | tee release-linux/RPM-CONTENTS.txt
+          rpm -qlp "$RPM" | grep -E '/marshmallow-browser(-launcher)?$'
+          rpm -qlp "$RPM" | grep -E '/applications/.+\.desktop$'
+
+      - name: Verify AppImage artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          APPIMAGE=release-linux/MarshMallow-Browser-5.0.2-x86_64.AppImage
+          test -s "$APPIMAGE"
+          test -x "$APPIMAGE"
+          file "$APPIMAGE"
+
+      - name: Create Linux source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          git archive \
+            --format=zip \
+            --prefix=MarshMallow-Browser-5.0.2-Linux-Source/ \
+            -o release-linux/MarshMallow-Browser-5.0.2-Linux-Source.zip \
+            HEAD
+
+      - name: Generate SHA-256 checksums
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd release-linux
+          sha256sum \
+            MarshMallow-Browser-5.0.2-x86_64.rpm \
+            MarshMallow-Browser-5.0.2-x86_64.AppImage \
+            MarshMallow-Browser-5.0.2-Linux-Source.zip \
+            > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+
+      - name: Generate Linux validation report
+        shell: bash
+        run: |
+          set -euo pipefail
+          REPORT=release-linux/RELATORIO-VALIDACAO-LINUX.txt
+          {
+            echo 'MARSHMALLOW BROWSER 5.0.2 - RELATORIO DE VALIDACAO LINUX'
+            echo '=========================================================='
+            echo
+            echo "Data UTC: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            echo "Git commit: $GITHUB_SHA"
+            echo "Git ref: $GITHUB_REF"
+            echo "Runner: $RUNNER_OS / $RUNNER_ARCH"
+            echo "Kernel: $(uname -srmo)"
+            echo "Node: $(node --version)"
+            echo "npm: $(npm --version)"
+            ELECTRON_VERSION=$(node -p "require('./package.json').devDependencies.electron")
+            BUILDER_VERSION=$(node -p "require('./package.json').devDependencies['electron-builder']")
+            echo "Electron: $ELECTRON_VERSION"
+            echo "electron-builder: $BUILDER_VERSION"
+            echo
+            echo 'RESULTADOS'
+            echo '----------'
+            echo 'PASS: testes unitarios e contratos Linux'
+            echo 'PASS: verificacao de sintaxe Electron'
+            echo 'PASS: TypeScript e build Vite'
+            echo 'PASS: pacote RPM gerado e inspecionado'
+            echo 'PASS: AppImage gerado e validado'
+            echo 'PASS: runtime Electron permaneceu ativo no smoke test Xvfb'
+            echo
+            echo 'ALVOS DE COMPATIBILIDADE DO RPM'
+            echo '-------------------------------'
+            echo 'Fedora / Ultramarine / RHEL / Rocky Linux / AlmaLinux x86_64'
+            echo
+            echo 'LIMITES DESTA VALIDACAO'
+            echo '-----------------------'
+            echo 'A build foi executada em GitHub Actions Ubuntu 24.04.'
+            echo 'O smoke test usa Xvfb e nao substitui teste fisico em cada distribuicao, GPU, GNOME, KDE ou Wayland.'
+            echo 'Compatibilidade especifica de hardware/distribuicao deve ser confirmada por testes reais quando houver acesso.'
+            echo
+            echo 'SHA-256'
+            echo '-------'
+            cat release-linux/SHA256SUMS.txt
+          } > "$REPORT"
+          cat "$REPORT"
+
+      - name: Upload MarshMallow Linux release artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: MarshMallow-Browser-5.0.2-Linux-x86_64
+          if-no-files-found: error
+          retention-days: 30
+          path: |
+            release-linux/MarshMallow-Browser-5.0.2-x86_64.rpm
+            release-linux/MarshMallow-Browser-5.0.2-x86_64.AppImage
+            release-linux/MarshMallow-Browser-5.0.2-Linux-Source.zip
+            release-linux/SHA256SUMS.txt
+            release-linux/RELATORIO-VALIDACAO-LINUX.txt
+            release-linux/RPM-CONTENTS.txt
+            release-linux/linux-smoke.log

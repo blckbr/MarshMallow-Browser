@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "marshmallow-gateway",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-20",
+  "workers_dev": true,
+  "ai": {
+    "binding": "AI"
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "ROOMS", "class_name": "WatchRoom" },
+      { "name": "AI_LIMITER", "class_name": "AiRateLimiter" },
+      { "name": "ACCOUNTS", "class_name": "AccountStore" },
+      { "name": "DOWNLOAD_COUNTER", "class_name": "DownloadCounter" }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["WatchRoom", "AiRateLimiter"]
+    },
+    {
+      "tag": "v2",
+      "new_sqlite_classes": ["AccountStore"]
+    },
+    {
+      "tag": "v3",
+      "new_sqlite_classes": ["DownloadCounter"]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

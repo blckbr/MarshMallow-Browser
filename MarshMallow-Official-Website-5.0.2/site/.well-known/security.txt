@@ -1,0 +1,5 @@
+Contact: https://github.com/blckbr/MarshMallow-Browser
+Policy: https://marshmallow-browser-br.pages.dev/seguranca/
+Preferred-Languages: pt-BR, en
+Canonical: https://marshmallow-browser-br.pages.dev/.well-known/security.txt
+Expires: 2027-08-23T00:00:00.000Z
