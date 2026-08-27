@@ -18,9 +18,9 @@
     "backend:deploy": "cd backend && npx wrangler deploy",
     "test:unit": "node --test tests/*.test.mjs",
     "verify:source": "npm run test:unit && node --check electron/main.mjs && node --check electron/preload.cjs && node scripts/verify-5.0.2.mjs",
-    "dist:linux": "npm run build:web && electron-builder --linux rpm AppImage --x64 -c.directories.output=release-linux",
-    "dist:linux:rpm": "npm run build:web && electron-builder --linux rpm --x64 -c.directories.output=release-linux",
-    "dist:linux:appimage": "npm run build:web && electron-builder --linux AppImage --x64 -c.directories.output=release-linux"
+    "dist:linux": "npm run build:web && electron-builder --linux rpm AppImage --x64 -c.directories.output=release-linux --publish never",
+    "dist:linux:rpm": "npm run build:web && electron-builder --linux rpm --x64 -c.directories.output=release-linux --publish never",
+    "dist:linux:appimage": "npm run build:web && electron-builder --linux AppImage --x64 -c.directories.output=release-linux --publish never"
   },
   "dependencies": {
     "livekit-client": "2.22.0",

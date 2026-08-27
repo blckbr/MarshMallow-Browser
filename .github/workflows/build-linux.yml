@@ -102,7 +102,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npx electron-builder --linux dir --x64 -c.directories.output=release-linux
+          npx electron-builder --linux dir --x64 -c.directories.output=release-linux --publish never
           test -x release-linux/linux-unpacked/marshmallow-browser
 
       - name: Configure Chromium sandbox for isolated smoke runtime
