@@ -76,6 +76,16 @@ jobs:
         shell: bash
         run: npm ci --no-audit --no-fund
 
+      - name: Restore Linux script executable permissions
+        shell: bash
+        run: |
+          set -euo pipefail
+          chmod +x scripts/linux/*.sh
+          test -x scripts/linux/verify-linux.sh
+          test -x scripts/linux/build-rpm.sh
+          test -x scripts/linux/build-appimage.sh
+          test -x scripts/linux/smoke-linux.sh
+
       - name: Verify Linux source
         shell: bash
         run: ./scripts/linux/verify-linux.sh
